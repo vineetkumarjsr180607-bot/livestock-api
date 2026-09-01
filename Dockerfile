@@ -1,11 +1,5 @@
 FROM python:3.9-slim
 
-# Install system dependencies required for Whisper (ffmpeg)
-RUN apt-get update && apt-get install -y \
-    ffmpeg \
-    git \
-    && rm -rf /var/lib/apt/lists/*
-
 WORKDIR /app
 
 COPY requirements.txt .
