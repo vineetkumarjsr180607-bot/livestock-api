@@ -31,10 +31,10 @@ except Exception as e:
     print(f"Error loading CNN model: {e}")
     cnn_model = None
 
-# Load Whisper model for voice note transcription
+# Load Whisper model ('tiny' version optimized for Render's 512MB RAM limit)
 try:
-    print("Loading Whisper model (small)...")
-    whisper_model = whisper.load_model("small")
+    print("Loading Whisper model (tiny)...")
+    whisper_model = whisper.load_model("tiny")
     print("Whisper model loaded successfully.")
 except Exception as e:
     print(f"Error loading Whisper model: {e}")
